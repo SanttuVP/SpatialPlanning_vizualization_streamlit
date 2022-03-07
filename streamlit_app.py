@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, heatmap, upload, vector # import your app modules here
+from apps import home, vector, espoo, valkeakoski, pyoratiet # import your app modules here
 
 st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
@@ -8,10 +8,11 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 # More icons can be found here: https://icons.getbootstrap.com
 
 apps = {
-    "home": {"title": "Home", "icon": "house"},
-    "heatmap": {"title": "Heatmap", "icon": "map"},
-    "upload": {"title": "Upload", "icon": "cloud-upload"},
-    "vector": {"title": "Vector", "icon": "bounding-box"}
+    "home": {"title": "Palaa etusivulle", "icon": "house"},
+    "vector": {"title": "Vector", "icon": "bounding-box"},    
+    "espoo": {"title": "Espoo", "icon": "building"},
+    "valkeakoski": {"title": "Valkeakoski", "icon": "house-fill"},
+    "pyoratiet": {"title": "Kaavoitetut pyörätiet", "icon": "bicycle"}
 }
 
 titles = [app["title"] for app in apps.values()]
@@ -26,22 +27,21 @@ else:
 
 with st.sidebar:
     selected = option_menu(
-        "Main Menu",
+        "Etusivu",
         options=titles,
         icons=icons,
         menu_icon="cast",
         default_index=default_index,
     )
 
-    st.sidebar.title("About")
+    st.sidebar.title("Sivustosta")
     st.sidebar.info(
         """
-        This web [app](https://share.streamlit.io/giswqs/streamlit-template) is maintained by [Qiusheng Wu](https://wetlands.io). You can follow me on social media:
-            [GitHub](https://github.com/giswqs) | [Twitter](https://twitter.com/giswqs) | [YouTube](https://www.youtube.com/c/QiushengWu) | [LinkedIn](https://www.linkedin.com/in/qiushengwu).
+        Tämä demosivusto pohjautuu [Qiusheng Wu](https://wetlands.io) Streamlit-pohjaan. 
         
-        Source code: <https://github.com/giswqs/streamlit-template>
+        Alkuperäisen pohjan koodi: <https://github.com/giswqs/streamlit-template>
 
-        More menu icons: <https://icons.getbootstrap.com>
+        Ikonit: <https://icons.getbootstrap.com>
     """
     )
 
