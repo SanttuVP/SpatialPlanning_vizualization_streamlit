@@ -1,15 +1,14 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, vector, espoo, valkeakoski, pyoratiet # import your app modules here
+from apps import home, espoo, valkeakoski, pyoratiet # import your app modules here
 
-st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
+st.set_page_config(page_title="Kaavatiedot-koontinäkymät", layout="wide")
 
 # A dictionary of apps in the format of {"App title": "App icon"}
 # More icons can be found here: https://icons.getbootstrap.com
 
 apps = {
     "home": {"title": "Palaa etusivulle", "icon": "house"},
-    "vector": {"title": "Vector", "icon": "bounding-box"},    
     "espoo": {"title": "Espoo", "icon": "building"},
     "valkeakoski": {"title": "Valkeakoski", "icon": "house-fill"},
     "pyoratiet": {"title": "Kaavoitetut pyörätiet", "icon": "bicycle"}
@@ -37,10 +36,8 @@ with st.sidebar:
     st.sidebar.title("Sivustosta")
     st.sidebar.info(
         """
-        Tämä demosivusto pohjautuu [Qiusheng Wu](https://wetlands.io) Streamlit-pohjaan. 
+        Tämä demosivusto pohjautuu [Qiusheng Wun](https://wetlands.io) Streamlit-[pohjaan](https://github.com/giswqs/streamlit-template). 
         
-        Alkuperäisen pohjan koodi: <https://github.com/giswqs/streamlit-template>
-
         Ikonit: <https://icons.getbootstrap.com>
     """
     )

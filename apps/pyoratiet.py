@@ -15,7 +15,7 @@ def app():
 
     m = leafmap.Map(center=[60.174, 24.802], zoom=14.5, height=600, widescreen=False)
 
-    gdf = gpd.read_file("http://localhost:5000/collections/koonti_koko_suomi_kaavakohteet/items?f=json&limit=1000")
+    gdf = gpd.read_file("http://pygeoapi-testing.gispocoding.fi/collections/koonti_koko_suomi_kaavakohteet/items?f=json&limit=1000")
     gdf['kaavoitusteema'] = gdf['kaavoitusteema'].astype('str')
     gdf['kaavamaarayslaji'] = gdf['kaavamaarayslaji'].astype('str')
     gdf = gdf[gdf['kaavamaarayslaji'].str.contains('polkupyörä')]
