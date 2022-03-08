@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, espoo, valkeakoski, pyoratiet # import your app modules here
+from apps import home, espoo, valkeakoski, pyoratiet, asuin, kerrosala # import your app modules here
 
 st.set_page_config(page_title="Kaavatiedot-koontinäkymät", layout="wide")
 
@@ -11,8 +11,11 @@ apps = {
     "home": {"title": "Palaa etusivulle", "icon": "house"},
     "espoo": {"title": "Espoo", "icon": "building"},
     "valkeakoski": {"title": "Valkeakoski", "icon": "house-fill"},
-    "pyoratiet": {"title": "Kaavoitetut pyörätiet", "icon": "bicycle"}
-}
+    "pyoratiet": {"title": "Kaavoitetut pyörätiet", "icon": "bicycle"},  
+    #"puistot": {"title": "Puistoihin liittyvät kaavamääräykset", "icon": "tree"},
+    "asuin": {"title": "Kaavoitetut asuintalot", "icon": "house"},
+    "kerrosala": {"title": "Kaavoitettu kerrosala", "icon": "building"}
+    }
 
 titles = [app["title"] for app in apps.values()]
 icons = [app["icon"] for app in apps.values()]

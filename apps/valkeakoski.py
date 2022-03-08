@@ -8,7 +8,7 @@ def app():
 
     st.markdown(
     """
-    Väritä ja visualisoi asemakaava-aineistoa kartan vasemmasta yläkulmasta avautuvan työkalupakin avulla.
+    Väritä, visualisoi ja filtteröi asemakaava-aineistoa kartan vasemmasta yläkulmasta avautuvan työkalupakin avulla.
 
     """
     )
