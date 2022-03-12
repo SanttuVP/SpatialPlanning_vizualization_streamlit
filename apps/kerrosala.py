@@ -19,7 +19,7 @@ def app():
     gdf['kaavoitusteema'] = gdf['kaavoitusteema'].astype('str')
     gdf['kaavamaarayslaji'] = gdf['kaavamaarayslaji'].astype('str')
     gdf = gdf[gdf['kaavamaarayslaji'].str.contains('sallittu kerrosala', case=False, na=False)]
-    gdf_map = gdf[["kaavoitusteema", "kaavamaarayslaji", "tekstiarvo", "geometry"]]
+    gdf_map = gdf[["kaavoitusteema", "kaavamaarayslaji", "numeerinen_arvo", "geometry"]]
     m.add_gdf(gdf_map, layer_name="Kerrosala")
 
     m.to_streamlit(height=700)
